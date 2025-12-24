@@ -1,0 +1,1 @@
+mne len` dumat`, prostite
