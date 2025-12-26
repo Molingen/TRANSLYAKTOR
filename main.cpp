@@ -5,9 +5,9 @@
 using namespace std;
 
 int main() {
-    cout << "Трансляктор арифметических выражений\n";
-    cout << "Поддерживаемые операции: +, -, *, (, ), /\n";
-    cout << "Введите выражение (или 'exit' для выхода):\n\n";
+    cout << "Arithmetic expression translator\n";
+    cout << "Supported operations: +, -, *, (, ), /\n";
+    cout << "Enter expression (or 'exit' for quit):\n\n";
     
     string line;
     while (true) {
@@ -27,10 +27,10 @@ int main() {
         auto result = translator::computeExpression(line);
         
         if (result.success) {
-            cout << "  Выражение корректно\n";
-            cout << "  Токены:    " << translator::tokensToString(result.tokens) << "\n";
-            cout << "  ОПН:       " << translator::tokensToString(result.rpnTokens) << "\n";
-            cout << "  Результат: " << fixed << setprecision(6) << result.value << "\n";
+            cout << "  The expression is correct\n";
+            cout << "  Tokens:    " << translator::tokensToString(result.tokens) << "\n";
+            cout << "  RPN:       " << translator::tokensToString(result.rpnTokens) << "\n";
+            cout << "  Result: " << fixed << setprecision(6) << result.value << "\n";
         } else {
             cout << "  " << result.error << "\n";
         }
